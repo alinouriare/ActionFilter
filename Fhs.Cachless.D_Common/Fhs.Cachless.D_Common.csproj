@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CCA0C4ED-F200-465D-89CF-79C77A63B5B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fhs.Cachless.D_Common</RootNamespace>
+    <AssemblyName>Fhs.Cachless.D_Common</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\ApplicationModeEnum.cs" />
+    <Compile Include="Enums\Business\AppDeviceInfoListSearchEnum.cs" />
+    <Compile Include="Enums\Business\AppErrorsEnum.cs" />
+    <Compile Include="Enums\Business\CharityListSearchEnum.cs" />
+    <Compile Include="Enums\Business\FinancialTransactionErrorListDetailsSearchEnum.cs" />
+    <Compile Include="Enums\Business\FinancialTransactionInfoKeyCodeEnum.cs" />
+    <Compile Include="Enums\Business\FinancialTransactionInternetChargeBuyListSearchEnum.cs" />
+    <Compile Include="Enums\Business\FinancialTransactionDestinationDetailsEnum.cs" />
+    <Compile Include="Enums\Business\FinancialTransactionChargeBuyListSearchEnum.cs" />
+    <Compile Include="Enums\Business\FinancialTransactionErrorListSearchEnum.cs" />
+    <Compile Include="Enums\Business\FinancialTransactionErrorListDetailsOrderEnum.cs" />
+    <Compile Include="Enums\Business\FinancialTransactionSarmadInsuranceListOrderEnum.cs" />
+    <Compile Include="Enums\Business\FinancialTransactionSarmadInsuranceListSearchEnum.cs" />
+    <Compile Include="Enums\Business\FinancialTransactionListSearchEnum.cs" />
+    <Compile Include="Enums\Business\InsurancePackageTypeEnum.cs" />
+    <Compile Include="Enums\Business\NotificationDataListSearchEnum.cs" />
+    <Compile Include="Enums\Business\NotificationDataTargetListSearchEnum.cs" />
+    <Compile Include="Enums\Business\LogUserIpDataListSearchEnum.cs" />
+    <Compile Include="Enums\Business\FinancialTransactionInternetChargeBuyListOrderEnum.cs" />
+    <Compile Include="Enums\Business\FinancialTransactionChargeBuyListOrderEnum.cs" />
+    <Compile Include="Enums\Business\CharityListOrderEnum.cs" />
+    <Compile Include="Enums\Business\FinancialTransactionListOrderEnum.cs" />
+    <Compile Include="Enums\Business\UserDataListOrderEnum.cs" />
+    <Compile Include="Enums\Business\UserDataListSearchEnum.cs" />
+    <Compile Include="Enums\ConfigGroupEnum.cs" />
+    <Compile Include="Enums\ConfigUsedTypeEnum.cs" />
+    <Compile Include="Enums\ConfirmationDestinationTypeEnum.cs" />
+    <Compile Include="Enums\ConfirmationOperationCodeEnum.cs" />
+    <Compile Include="Enums\ConfirmationSourceTypeEnum.cs" />
+    <Compile Include="Enums\ConfirmationTypeEnum.cs" />
+    <Compile Include="Enums\MoeinShopConsistentStatusEnum.cs" />
+    <Compile Include="Enums\DeviceStateEnum.cs" />
+    <Compile Include="Enums\DeviceTypeEnum.cs" />
+    <Compile Include="Enums\InformationLogTypeEnum.cs" />
+    <Compile Include="Enums\LogBusinessTypeEnum.cs" />
+    <Compile Include="Enums\NotificationContentTypeEnum.cs" />
+    <Compile Include="Enums\NotificationDataStateEnum.cs" />
+    <Compile Include="Enums\NotificationTargetSendStateEnum.cs" />
+    <Compile Include="Enums\ObjectTypeEnum.cs" />
+    <Compile Include="Enums\OperationStatusEnum.cs" />
+    <Compile Include="Enums\PlatformTypeEnum.cs" />
+    <Compile Include="Enums\ReadNotificationStatusEnum.cs" />
+    <Compile Include="Enums\RuleTypeEnum.cs" />
+    <Compile Include="Enums\ChargeTypeEnum.cs" />
+    <Compile Include="Enums\ScoreTypeEnum.cs" />
+    <Compile Include="Enums\SearchOrderDirectionEnum.cs" />
+    <Compile Include="Enums\SexEnum.cs" />
+    <Compile Include="Enums\SystemTransactionStatusEnum.cs" />
+    <Compile Include="Enums\SystemTransactionTypeEnum.cs" />
+    <Compile Include="Enums\TokenStatusEnum.cs" />
+    <Compile Include="Enums\TransactionStatusEnum.cs" />
+    <Compile Include="Enums\TransactionTypeEnum.cs" />
+    <Compile Include="Enums\UserContactSavedTypeEnum.cs" />
+    <Compile Include="Enums\UserContactUsedDataTypeEnum.cs" />
+    <Compile Include="Enums\UserContractDataTypeEnum.cs" />
+    <Compile Include="Enums\UserRoleTypeEnum.cs" />
+    <Compile Include="Enums\UserStateEnum.cs" />
+    <Compile Include="Interfaces\IThisAppContextInterface.cs" />
+    <Compile Include="Model\AppException.cs" />
+    <Compile Include="Model\BaseModels\_BaseDbModel.cs" />
+    <Compile Include="Model\BaseSearchHeaderDataHolder.cs" />
+    <Compile Include="Model\ConfigurationData.cs" />
+    <Compile Include="Model\DataBaseConnectionStatus.cs" />
+    <Compile Include="Model\ConsistentMoeinShopModel.cs" />
+    <Compile Include="Model\FinancialOperationModel.cs" />
+    <Compile Include="Model\KeyValueItem.cs" />
+    <Compile Include="Model\OperationStatusResult.cs" />
+    <Compile Include="Model\ReportModels\SarmadInsuranceDetailsReportModel.cs" />
+    <Compile Include="Model\ReportModels\CardTransferReportModel.cs" />
+    <Compile Include="Model\ReportModels\BillNumberDetailsReportModel.cs" />
+    <Compile Include="Model\ReportModels\CharityDetailsReportModel.cs" />
+    <Compile Include="Model\ReportModels\ChargeBuyDetailsReportModel.cs" />
+    <Compile Include="Model\ReportModels\LogUserIpReportModel.cs" />
+    <Compile Include="Model\ReportModels\SPFinancialTransactionErrorListGroupByTTypeTStatusModel.cs" />
+    <Compile Include="Model\UserDataReport.cs" />
+    <Compile Include="Model\FinancialTransactionReport.cs" />
+    <Compile Include="Model\DeviceInformation.cs" />
+    <Compile Include="Model\IdentifyClass.cs" />
+    <Compile Include="Model\InformationLog.cs" />
+    <Compile Include="Model\InformationLogHolder.cs" />
+    <Compile Include="Model\SearchHeaderDataHolder.cs" />
+    <Compile Include="Model\ThisAppContext.cs" />
+    <Compile Include="Model\UserInformation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fhs.Cachless.E_Utility\Fhs.Cachless.E_Utility.csproj">
+      <Project>{29cc40aa-8586-41d5-a6e4-d9926b3c1f6d}</Project>
+      <Name>Fhs.Cachless.E_Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Fhs_CachLessDBModel_Log.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AppRequestLogTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fk_DeviceId" Type="int" />
+    <Property Name="Fk_TokenId" Type="int" />
+    <Property Name="AppUserInfo" Type="nvarchar" MaxLength="100" />
+    <Property Name="UrlAddress" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="StatusCode" Type="int" Nullable="false" />
+    <Property Name="StatusCodeStr" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AnswerCode" Type="int" Nullable="false" />
+    <Property Name="AnswerStr" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RequestDate" Type="datetime" Nullable="false" />
+    <Property Name="ResponseTime" Type="float" Nullable="false" />
+    <Property Name="MessageList" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="MainToken" Type="nvarchar" MaxLength="4000" Nullable="false" />
+    <Property Name="Ip" Type="nvarchar" MaxLength="32" />
+    <Property Name="ResponseMessage" Type="nvarchar" MaxLength="4000" Nullable="false" />
+    <Property Name="ApplicationOwner" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RequestHeader" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Fhs_CachLessDBModel_LogStoreContainer">
+    <EntitySet Name="AppRequestLogTable" EntityType="Self.AppRequestLogTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Fhs_CachLessDBModel_LogStoreContainer" CdmEntityContainer="Fhs_CachLessDBEntities_Log">
+    <EntitySetMapping Name="AppRequestLogTables">
+      <EntityTypeMapping TypeName="Fhs_CachLessDBModel_Log.AppRequestLogTable">
+        <MappingFragment StoreEntitySet="AppRequestLogTable">
+          <ScalarProperty Name="RequestHeader" ColumnName="RequestHeader" />
+          <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ApplicationOwner" ColumnName="ApplicationOwner" />
+          <ScalarProperty Name="ResponseMessage" ColumnName="ResponseMessage" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="MainToken" ColumnName="MainToken" />
+          <ScalarProperty Name="MessageList" ColumnName="MessageList" />
+          <ScalarProperty Name="ResponseTime" ColumnName="ResponseTime" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+          <ScalarProperty Name="AnswerStr" ColumnName="AnswerStr" />
+          <ScalarProperty Name="AnswerCode" ColumnName="AnswerCode" />
+          <ScalarProperty Name="StatusCodeStr" ColumnName="StatusCodeStr" />
+          <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+          <ScalarProperty Name="UrlAddress" ColumnName="UrlAddress" />
+          <ScalarProperty Name="AppUserInfo" ColumnName="AppUserInfo" />
+          <ScalarProperty Name="Fk_TokenId" ColumnName="Fk_TokenId" />
+          <ScalarProperty Name="Fk_DeviceId" ColumnName="Fk_DeviceId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

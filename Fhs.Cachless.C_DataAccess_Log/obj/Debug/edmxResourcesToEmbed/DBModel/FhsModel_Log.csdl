@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Fhs_CachLessDBModel_Log" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Fhs_CachLessDBEntities_Log" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AppRequestLogTables" EntityType="Fhs_CachLessDBModel_Log.AppRequestLogTable" />
+  </EntityContainer>
+  <EntityType Name="AppRequestLogTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fk_DeviceId" Type="Int32" />
+    <Property Name="Fk_TokenId" Type="Int32" />
+    <Property Name="AppUserInfo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UrlAddress" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="StatusCode" Type="Int32" Nullable="false" />
+    <Property Name="StatusCodeStr" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AnswerCode" Type="Int32" Nullable="false" />
+    <Property Name="AnswerStr" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ResponseTime" Type="Double" Nullable="false" />
+    <Property Name="MessageList" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MainToken" Type="String" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Ip" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="ResponseMessage" Type="String" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicationOwner" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RequestHeader" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

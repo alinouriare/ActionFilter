@@ -1,0 +1,10 @@
+D:\HoushmandSepehrPro\FHS_CachLess_New\App\Fhs.Cachless.D_Common\bin\Release\Fhs.Cachless.D_Common.dll
+D:\HoushmandSepehrPro\FHS_CachLess_New\App\Fhs.Cachless.D_Common\bin\Release\Fhs.Cachless.D_Common.pdb
+D:\HoushmandSepehrPro\FHS_CachLess_New\App\Fhs.Cachless.D_Common\bin\Release\Fhs.Cachless.E_Utility.dll
+D:\HoushmandSepehrPro\FHS_CachLess_New\App\Fhs.Cachless.D_Common\bin\Release\Newtonsoft.Json.dll
+D:\HoushmandSepehrPro\FHS_CachLess_New\App\Fhs.Cachless.D_Common\bin\Release\Fhs.Cachless.E_Utility.pdb
+D:\HoushmandSepehrPro\FHS_CachLess_New\App\Fhs.Cachless.D_Common\bin\Release\Newtonsoft.Json.xml
+D:\HoushmandSepehrPro\FHS_CachLess_New\App\Fhs.Cachless.D_Common\obj\Release\Fhs.Cachless.D_Common.csprojResolveAssemblyReference.cache
+D:\HoushmandSepehrPro\FHS_CachLess_New\App\Fhs.Cachless.D_Common\obj\Release\Fhs.Cachless.D_Common.csproj.CoreCompileInputs.cache
+D:\HoushmandSepehrPro\FHS_CachLess_New\App\Fhs.Cachless.D_Common\obj\Release\Fhs.Cachless.D_Common.dll
+D:\HoushmandSepehrPro\FHS_CachLess_New\App\Fhs.Cachless.D_Common\obj\Release\Fhs.Cachless.D_Common.pdb

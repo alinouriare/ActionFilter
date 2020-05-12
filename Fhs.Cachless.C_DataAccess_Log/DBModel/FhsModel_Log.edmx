@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Fhs_CachLessDBModel_Log.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AppRequestLogTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Fk_DeviceId" Type="int" />
+          <Property Name="Fk_TokenId" Type="int" />
+          <Property Name="AppUserInfo" Type="nvarchar" MaxLength="100" />
+          <Property Name="UrlAddress" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="StatusCode" Type="int" Nullable="false" />
+          <Property Name="StatusCodeStr" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AnswerCode" Type="int" Nullable="false" />
+          <Property Name="AnswerStr" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="RequestDate" Type="datetime" Nullable="false" />
+          <Property Name="ResponseTime" Type="float" Nullable="false" />
+          <Property Name="MessageList" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="MainToken" Type="nvarchar" MaxLength="4000" Nullable="false" />
+          <Property Name="Ip" Type="nvarchar" MaxLength="32" />
+          <Property Name="ResponseMessage" Type="nvarchar" MaxLength="4000" Nullable="false" />
+          <Property Name="ApplicationOwner" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="RequestHeader" Type="nvarchar" MaxLength="4000" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Fhs_CachLessDBModel_LogStoreContainer">
+          <EntitySet Name="AppRequestLogTable" EntityType="Self.AppRequestLogTable" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Fhs_CachLessDBModel_Log" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Fhs_CachLessDBEntities_Log" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AppRequestLogTables" EntityType="Fhs_CachLessDBModel_Log.AppRequestLogTable" />
+        </EntityContainer>
+        <EntityType Name="AppRequestLogTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Fk_DeviceId" Type="Int32" />
+          <Property Name="Fk_TokenId" Type="Int32" />
+          <Property Name="AppUserInfo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UrlAddress" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="StatusCode" Type="Int32" Nullable="false" />
+          <Property Name="StatusCodeStr" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AnswerCode" Type="Int32" Nullable="false" />
+          <Property Name="AnswerStr" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RequestDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ResponseTime" Type="Double" Nullable="false" />
+          <Property Name="MessageList" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MainToken" Type="String" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Ip" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="ResponseMessage" Type="String" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationOwner" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RequestHeader" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Fhs_CachLessDBModel_LogStoreContainer" CdmEntityContainer="Fhs_CachLessDBEntities_Log">
+          <EntitySetMapping Name="AppRequestLogTables">
+            <EntityTypeMapping TypeName="Fhs_CachLessDBModel_Log.AppRequestLogTable">
+              <MappingFragment StoreEntitySet="AppRequestLogTable">
+                <ScalarProperty Name="RequestHeader" ColumnName="RequestHeader" />
+                <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="ApplicationOwner" ColumnName="ApplicationOwner" />
+                <ScalarProperty Name="ResponseMessage" ColumnName="ResponseMessage" />
+                <ScalarProperty Name="Ip" ColumnName="Ip" />
+                <ScalarProperty Name="MainToken" ColumnName="MainToken" />
+                <ScalarProperty Name="MessageList" ColumnName="MessageList" />
+                <ScalarProperty Name="ResponseTime" ColumnName="ResponseTime" />
+                <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+                <ScalarProperty Name="AnswerStr" ColumnName="AnswerStr" />
+                <ScalarProperty Name="AnswerCode" ColumnName="AnswerCode" />
+                <ScalarProperty Name="StatusCodeStr" ColumnName="StatusCodeStr" />
+                <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+                <ScalarProperty Name="UrlAddress" ColumnName="UrlAddress" />
+                <ScalarProperty Name="AppUserInfo" ColumnName="AppUserInfo" />
+                <ScalarProperty Name="Fk_TokenId" ColumnName="Fk_TokenId" />
+                <ScalarProperty Name="Fk_DeviceId" ColumnName="Fk_DeviceId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
